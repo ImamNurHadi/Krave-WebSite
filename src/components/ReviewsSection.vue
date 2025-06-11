@@ -178,7 +178,7 @@ export default {
         {
           id: 1,
           platform: "Instagram",
-          image: "/picture/6c54f810-416b-4266-a628-fc00b5d4ed49_MilkChocolateChip_FlyingAerial_TECH.png",
+          image: "/6c54f810-416b-4266-a628-fc00b5d4ed49_MilkChocolateChip_FlyingAerial_TECH.png",
           description: "Classic comfort in every bite! 🍪✨",
           likes: 1250,
           comments: 89
@@ -186,7 +186,7 @@ export default {
         {
           id: 2,
           platform: "TikTok",
-          image: "/picture/ce1deb6c-c43d-434f-890a-d5d12d4de95b_Smores_FlyingAerial_TECH.png",
+          image: "/ce1deb6c-c43d-434f-890a-d5d12d4de95b_Smores_FlyingAerial_TECH.png",
           description: "S'mores cookie = childhood dreams ✨🔥",
           likes: 2340,
           comments: 156
@@ -194,7 +194,7 @@ export default {
         {
           id: 3,
           platform: "Instagram",
-          image: "/picture/46bf1e33-f9bf-40ce-be5e-f02de5d47146_FrenchToast_FlyingAerial_TECH.png",
+          image: "/46bf1e33-f9bf-40ce-be5e-f02de5d47146_FrenchToast_FlyingAerial_TECH.png",
           description: "Breakfast cookie anyone? 🥞🍪",
           likes: 890,
           comments: 67
@@ -202,7 +202,7 @@ export default {
         {
           id: 4,
           platform: "Twitter",
-          image: "/picture/8e31c971-09e9-4e08-b1d6-765ed1f9f0dc_RaspberryLemonade_FlyingAerial_TECH.png",
+          image: "/8e31c971-09e9-4e08-b1d6-765ed1f9f0dc_RaspberryLemonade_FlyingAerial_TECH.png",
           description: "Summer vibes in cookie form! 🍋🫐",
           likes: 674,
           comments: 43
