@@ -1,5 +1,12 @@
 <template>
   <section class="hero" id="home">
+    <div class="video-background">
+      <video autoplay muted loop playsinline>
+        <source src="/Krave.mp4" type="video/mp4">
+      </video>
+      <div class="video-overlay"></div>
+    </div>
+    
     <div class="hero-container">
       <div class="hero-content">
         <h1 class="hero-title fade-in-up">Premium Cookies & Desserts</h1>
@@ -45,7 +52,6 @@ export default {
 
 <style scoped>
 .hero {
-  background: linear-gradient(135deg, #fce4ec 0%, #f8bbd9 100%);
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -57,15 +63,32 @@ export default {
   box-sizing: border-box;
 }
 
-.hero::before {
-  content: '';
+.video-background {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="%23ffffff" opacity="0.1"/></svg>') repeat;
-  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.video-background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 2;
 }
 
 .hero-container {
@@ -74,7 +97,7 @@ export default {
   padding: 0 20px;
   width: 100%;
   position: relative;
-  z-index: 2;
+  z-index: 3;
 }
 
 .hero-content {
@@ -85,20 +108,22 @@ export default {
 .hero-title {
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 800;
-  color: #333;
+  color: #fff;
   margin-bottom: 24px;
   letter-spacing: -0.02em;
   line-height: 1.1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .hero-subtitle {
   font-size: clamp(1.1rem, 2.5vw, 1.3rem);
-  color: #555;
+  color: #f0f0f0;
   margin-bottom: 40px;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
   font-weight: 400;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .hero-actions {
@@ -114,16 +139,18 @@ export default {
   font-size: 1.1rem;
   font-weight: 600;
   min-width: 160px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .week-banner {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.95);
   padding: 24px;
   border-radius: 20px;
   margin: 0 auto 40px;
   max-width: 400px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   border: 2px solid #e91e63;
+  backdrop-filter: blur(10px);
 }
 
 .banner-content h2 {
@@ -161,24 +188,27 @@ export default {
 .stat-item {
   text-align: center;
   padding: 16px;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.15);
   border-radius: 15px;
   backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .stat-item h3 {
   font-size: 2.2rem;
   font-weight: 800;
-  color: #e91e63;
+  color: #fff;
   margin-bottom: 8px;
   line-height: 1;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .stat-item p {
-  color: #555;
+  color: #f0f0f0;
   font-weight: 500;
   font-size: 0.9rem;
   margin: 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 /* Animation delays */
@@ -201,75 +231,38 @@ export default {
     padding: 0 15px;
   }
 
-  .hero-content {
-    margin-bottom: 40px;
-  }
-
   .hero-actions {
     flex-direction: column;
     align-items: center;
-    gap: 15px;
-    margin-bottom: 30px;
   }
 
   .hero-btn {
-    width: 200px;
-    padding: 12px 24px;
-  }
-
-  .week-banner {
-    margin-bottom: 30px;
-    padding: 20px;
-  }
-
-  .banner-content h2 {
-    font-size: 1.4rem;
+    min-width: 200px;
   }
 
   .hero-stats {
     grid-template-columns: 1fr;
-    gap: 15px;
-    max-width: 280px;
+    gap: 20px;
+    max-width: 300px;
   }
 
-  .stat-item {
-    padding: 12px;
-  }
-
-  .stat-item h3 {
-    font-size: 1.8rem;
+  .week-banner {
+    margin: 0 15px 40px;
+    max-width: none;
   }
 }
 
 @media (max-width: 480px) {
-  .hero {
-    min-height: 90vh;
-    padding: 90px 0 20px;
-  }
-
-  .week-banner {
-    padding: 16px;
-    margin-bottom: 25px;
-  }
-
-  .banner-content h2 {
-    font-size: 1.2rem;
-  }
-
-  .banner-content p {
-    font-size: 0.9rem;
+  .hero-container {
+    padding: 0 10px;
   }
 
   .hero-stats {
-    gap: 12px;
+    gap: 16px;
   }
 
-  .stat-item h3 {
-    font-size: 1.6rem;
-  }
-
-  .stat-item p {
-    font-size: 0.85rem;
+  .stat-item {
+    padding: 12px;
   }
 }
 </style> 

@@ -56,33 +56,82 @@
         <h3 class="team-title">Meet Our Team</h3>
         <div class="team-grid">
           <div class="team-member">
-            <div class="member-photo">
-              <img src="/ImamCrop.jpg" alt="Imam Nurhadi">
+            <div class="member-photo-container">
+              <div class="member-photo">
+                <img src="/Asadel.jpg" alt="Asadel Naufaleo">
+              </div>
             </div>
             <div class="member-info">
-              <h4>Imam Nurhadi</h4>
+              <h4>Asadel Naufaleo</h4>
+              <p class="member-id">(5027221009)</p>
+              <p class="role">Chief Technology Officer</p>
+              <p class="bio">"I lead our digital innovation, from our ordering app to smart kitchen technology that ensures perfect consistency in every batch."</p>
+            </div>
+          </div>
+          <div class="team-member founder-highlight">
+            <div class="member-photo-container">
+              <div class="member-photo">
+                <img src="/ImamCrop.jpg" alt="Imam Nurhadi">
+              </div>
+              <div class="crown-icon">👑</div>
+            </div>
+            <div class="member-info">
+              <h4>Imam Nurhadi 👑</h4>
+              <p class="member-id">(5027221046)</p>
               <p class="role">Founder & Head Baker</p>
               <p class="bio">"I started Krave with a simple mission: create cookies so good, they become unforgettable moments."</p>
             </div>
           </div>
           <div class="team-member">
-            <div class="member-photo">
-              <img src="https://images.unsplash.com/photo-1494790108755-2616b332c2c2?w=300&h=300&fit=crop&crop=face" alt="Sarah Mitchell">
+            <div class="member-photo-container">
+              <div class="member-photo">
+                <img src="/Faishal.jpg" alt="M. Faishal Rizqy">
+              </div>
             </div>
             <div class="member-info">
-              <h4>Sarah Mitchell</h4>
-              <p class="role">Chief Recipe Developer</p>
-              <p class="bio">"Every new flavor is a labor of love. I spend months perfecting each recipe until it's absolutely perfect."</p>
+              <h4>M. Faishal Rizqy</h4>
+              <p class="member-id">(5027221026)</p>
+              <p class="role">Creative Director</p>
+              <p class="bio">"I design every visual element that makes Krave special, from packaging to store aesthetics that create the perfect cookie experience."</p>
             </div>
           </div>
           <div class="team-member">
-            <div class="member-photo">
-              <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face" alt="Mike Rodriguez">
+            <div class="member-photo-container">
+              <div class="member-photo">
+                <img src="/Krisna.jpg" alt="Marselinus Krisnawan R.">
+              </div>
             </div>
             <div class="member-info">
-              <h4>Mike Rodriguez</h4>
+              <h4>Marselinus Krisnawan R.</h4>
+              <p class="member-id">(5027221056)</p>
               <p class="role">Operations Manager</p>
-              <p class="bio">"I ensure every location maintains our high standards and that every customer feels like family."</p>
+              <p class="bio">"I ensure every location maintains our high standards and that every customer feels like family when they visit us."</p>
+            </div>
+          </div>
+          <div class="team-member">
+            <div class="member-photo-container">
+              <div class="member-photo">
+                <img src="/Dhimaz.jpg" alt="Rafif Dhimaz A.">
+              </div>
+            </div>
+            <div class="member-info">
+              <h4>Rafif Dhimaz A.</h4>
+              <p class="member-id">(5027221066)</p>
+              <p class="role">Quality Assurance Manager</p>
+              <p class="bio">"Every ingredient, every process, every final product goes through my rigorous standards because excellence is non-negotiable."</p>
+            </div>
+          </div>
+          <div class="team-member">
+            <div class="member-photo-container">
+              <div class="member-photo">
+                <img src="/Valen.jpg" alt="Ong, Valencio J. P.">
+              </div>
+            </div>
+            <div class="member-info">
+              <h4>Ong, Valencio J. P.</h4>
+              <p class="member-id">(5027221002)</p>
+              <p class="role">Customer Experience Director</p>
+              <p class="bio">"I focus on creating magical moments for our customers, ensuring every interaction with Krave exceeds expectations."</p>
             </div>
           </div>
         </div>
@@ -236,8 +285,10 @@ export default {
 
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .team-member {
@@ -252,13 +303,19 @@ export default {
   transform: translateY(-5px);
 }
 
+.member-photo-container {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto 25px;
+}
+
 .member-photo {
   width: 120px;
   height: 120px;
   border-radius: 50%;
   overflow: hidden;
-  margin: 0 auto 25px;
   border: 4px solid #e91e63;
+  position: relative;
 }
 
 .member-photo img {
@@ -267,23 +324,97 @@ export default {
   object-fit: cover;
 }
 
+.crown-icon {
+  position: absolute;
+  top: -25%;
+  left: 25%;
+  font-size: 2.5rem;
+  z-index: 10;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+  animation: crownFloat 2s ease-in-out infinite;
+}
+
+@keyframes crownFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.founder-highlight {
+  background: linear-gradient(135deg, #fff9c4, #f8f4d6);
+  border: 3px solid #ffd700;
+  position: relative;
+  overflow: visible;
+}
+
+.founder-highlight::before {
+  content: '✨';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 1.5rem;
+  animation: sparkle 1.5s ease-in-out infinite;
+}
+
+.founder-highlight::after {
+  content: '✨';
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  animation: sparkle 1.5s ease-in-out infinite 0.7s;
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+.founder-highlight .member-photo {
+  border: 4px solid #ffd700;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+}
+
+.founder-highlight .member-info h4 {
+  color: #b8860b;
+  text-shadow: 1px 1px 2px rgba(255, 215, 0, 0.3);
+}
+
 .member-info h4 {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 700;
   color: #333;
   margin-bottom: 5px;
+}
+
+.member-id {
+  color: #e91e63;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
 }
 
 .role {
   color: #e91e63;
   font-weight: 600;
   margin-bottom: 15px;
+  font-size: 1rem;
 }
 
 .bio {
   color: #666;
   line-height: 1.6;
   font-style: italic;
+  font-size: 0.9rem;
 }
 
 .commitment-grid {
