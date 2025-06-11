@@ -57,10 +57,10 @@
         <div class="team-grid">
           <div class="team-member">
             <div class="member-photo">
-              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face" alt="Alex Johnson">
+              <img src="/ImamCrop.jpg" alt="Imam Nurhadi">
             </div>
             <div class="member-info">
-              <h4>Alex Johnson</h4>
+              <h4>Imam Nurhadi</h4>
               <p class="role">Founder & Head Baker</p>
               <p class="bio">"I started Krave with a simple mission: create cookies so good, they become unforgettable moments."</p>
             </div>
