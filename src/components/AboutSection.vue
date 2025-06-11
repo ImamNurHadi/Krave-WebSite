@@ -76,7 +76,7 @@
               <div class="crown-icon">👑</div>
             </div>
             <div class="member-info">
-              <h4>Imam Nurhadi 👑</h4>
+              <h4>Imam Nurhadi</h4>
               <p class="member-id">(5027221046)</p>
               <p class="role">Founder & Head Baker</p>
               <p class="bio">"I started Krave with a simple mission: create cookies so good, they become unforgettable moments."</p>
@@ -219,6 +219,7 @@ export default {
   background: #f8f9fa;
   border-radius: 20px;
   transition: transform 0.3s ease;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
 
 .story-item:hover {
@@ -246,6 +247,7 @@ export default {
 .team-section,
 .commitment-section {
   margin-bottom: 100px;
+  
 }
 
 .values-title,
@@ -256,6 +258,7 @@ export default {
   font-weight: 700;
   color: #333;
   margin-bottom: 50px;
+  
 }
 
 .values-grid {
@@ -266,6 +269,7 @@ export default {
 
 .value-card {
   background: linear-gradient(135deg, #e91e63, #c2185b);
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
   color: #fff;
   padding: 40px 30px;
   border-radius: 20px;
@@ -293,6 +297,7 @@ export default {
 
 .team-member {
   background: #f8f9fa;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   padding: 30px;
   border-radius: 20px;
   text-align: center;

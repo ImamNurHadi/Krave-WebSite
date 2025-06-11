@@ -314,6 +314,7 @@ export default {
 
 .store-features {
   text-align: center;
+  
 }
 
 .store-features h3 {
@@ -327,12 +328,14 @@ export default {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
+  
 }
 
 .feature-item {
   text-align: center;
   padding: 30px 20px;
   background: #f8f9fa;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 15px;
   transition: transform 0.3s ease;
 }

@@ -496,7 +496,7 @@ export default {
 
 .social-reviews {
   padding: 80px 0;
-  background: #fff;
+  background: transparent;
 }
 
 .social-reviews h3 {
