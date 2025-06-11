@@ -66,6 +66,19 @@ export default {
   background: #333;
   color: #fff;
   padding: 60px 0 30px;
+  width: 100vw;
+  margin: 0;
+  margin-left: calc(-50vw + 50%);
+  position: relative;
+  left: 0;
+  right: 0;
+}
+
+.footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
 }
 
 .footer-content {
@@ -185,6 +198,16 @@ export default {
     flex-direction: column;
     gap: 15px;
     text-align: center;
+  }
+  
+  .footer .container {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer .container {
+    padding: 0 10px;
   }
 }
 </style> 
