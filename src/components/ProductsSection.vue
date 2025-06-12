@@ -366,7 +366,7 @@ export default {
   position: relative;
   height: 220px;
   overflow: hidden;
-  background: #f8f9fa;
+  background: rgba(248, 249, 250, 0.3);
   flex-shrink: 0;
 }
 
@@ -451,7 +451,8 @@ export default {
   margin-bottom: 16px;
   margin-top: auto;
   padding: 12px;
-  background: #f8f9fa;
+  background: rgba(248, 249, 250, 0.5);
+  backdrop-filter: blur(5px);
   border-radius: 12px;
 }
 
@@ -620,7 +621,8 @@ export default {
   display: flex;
   justify-content: space-between;
   padding: 12px;
-  background: #f8f9fa;
+  background: rgba(248, 249, 250, 0.5);
+  backdrop-filter: blur(5px);
   border-radius: 8px;
   font-size: 0.9rem;
 }

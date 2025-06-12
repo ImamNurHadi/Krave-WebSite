@@ -4,24 +4,25 @@
       <h2 class="section-title">Find Our Locations</h2>
       <p class="section-subtitle">Visit us at any of our convenient locations for the freshest cookies and desserts</p>
       
-      <div class="locations-grid">
-        <!-- Map Section -->
-        <div class="map-section">
-          <div class="map-container">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387190.2799160891!2d-74.25987701513004!3d40.69767006272707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQxJzUyLjYiTiA3NMKwMDAnMDAuMCJX!5e0!3m2!1sen!2sus!4v1635959999999!5m2!1sen!2sus"
-              width="100%"
-              height="400"
-              style="border:0; border-radius: 15px;"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-          </div>
+      <!-- Map Section - Full Width -->
+      <div class="map-section">
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387190.2799160891!2d-74.25987701513004!3d40.69767006272707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQxJzUyLjYiTiA3NMKwMDAnMDAuMCJX!5e0!3m2!1sen!2sus!4v1635959999999!5m2!1sen!2sus"
+            width="100%"
+            height="500"
+            style="border:0; border-radius: 15px;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
         </div>
-        
-        <!-- Store Information -->
-        <div class="store-info">
+      </div>
+
+      <!-- Store Information Grid - Side by Side -->
+      <div class="store-info-grid">
+        <!-- Main Store Information -->
+        <div class="main-store-info">
           <h3>Our Main Store</h3>
           <div class="store-card">
             <div class="store-header">
@@ -74,25 +75,55 @@
             </div>
           </div>
           
-          <!-- Additional Stores -->
-          <div class="other-locations">
-            <h4>Other Locations</h4>
-            <div class="location-list">
-              <div class="location-item">
-                <h5>Downtown Branch</h5>
-                <p>456 Main Ave, Downtown NY</p>
-                <span class="distance">2.3 miles away</span>
-              </div>
-              <div class="location-item">
-                <h5>Mall Location</h5>
-                <p>789 Shopping Blvd, Mall Plaza</p>
-                <span class="distance">4.8 miles away</span>
-              </div>
-              <div class="location-item">
-                <h5>Airport Terminal</h5>
-                <p>JFK Airport Terminal 4</p>
-                <span class="distance">12.1 miles away</span>
-              </div>
+          <!-- Additional Store Features -->
+          <div class="store-features-mini">
+            <h4>Store Features</h4>
+            <div class="feature-tags">
+              <span class="feature-tag">🚗 Drive-Thru</span>
+              <span class="feature-tag">☕ Coffee Bar</span>
+              <span class="feature-tag">🎂 Custom Cakes</span>
+              <span class="feature-tag">📦 Online Orders</span>
+              <span class="feature-tag">🅿️ Free Parking</span>
+              <span class="feature-tag">♿ Wheelchair Accessible</span>
+            </div>
+          </div>
+
+
+        </div>
+        
+        <!-- Other Locations -->
+        <div class="other-locations">
+          <h3>Other Locations</h3>
+          <div class="location-list">
+            <div class="location-item">
+              <h5>Downtown Branch</h5>
+              <p>456 Main Ave, Downtown NY</p>
+              <span class="distance">2.3 miles away</span>
+            </div>
+            <div class="location-item">
+              <h5>Mall Location</h5>
+              <p>789 Shopping Blvd, Mall Plaza</p>
+              <span class="distance">4.8 miles away</span>
+            </div>
+            <div class="location-item">
+              <h5>Airport Terminal</h5>
+              <p>JFK Airport Terminal 4</p>
+              <span class="distance">12.1 miles away</span>
+            </div>
+            <div class="location-item">
+              <h5>Uptown Store</h5>
+              <p>321 Broadway, Uptown NY</p>
+              <span class="distance">6.5 miles away</span>
+            </div>
+            <div class="location-item">
+              <h5>Brooklyn Branch</h5>
+              <p>987 Park Ave, Brooklyn NY</p>
+              <span class="distance">8.2 miles away</span>
+            </div>
+            <div class="location-item">
+              <h5>Queens Location</h5>
+              <p>654 Queens Blvd, Queens NY</p>
+              <span class="distance">11.3 miles away</span>
             </div>
           </div>
         </div>
@@ -158,15 +189,9 @@ export default {
   margin-right: auto;
 }
 
-.locations-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  margin-bottom: 80px;
-}
-
 .map-section {
   position: relative;
+  margin-bottom: 60px;
 }
 
 .map-container {
@@ -175,7 +200,15 @@ export default {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-.store-info h3 {
+.store-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
+.main-store-info h3,
+.other-locations h3 {
   font-size: 1.8rem;
   font-weight: 700;
   color: #333;
@@ -290,9 +323,10 @@ export default {
 
 .location-item {
   padding: 15px;
-  background: #f8f9fa;
+  background: rgba(248, 249, 250, 0.5);
+  backdrop-filter: blur(5px);
   border-radius: 12px;
-  border: 1px solid #eee;
+  border: 1px solid rgba(238, 238, 238, 0.5);
 }
 
 .location-item h5 {
@@ -312,6 +346,37 @@ export default {
   font-size: 0.8rem;
   font-weight: 500;
 }
+
+/* Main Store Additional Content */
+.store-features-mini {
+  margin-top: 30px;
+}
+
+.store-features-mini h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.feature-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 25px;
+}
+
+.feature-tag {
+  background: rgba(233, 30, 99, 0.1);
+  color: #e91e63;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid rgba(233, 30, 99, 0.2);
+}
+
+
 
 .store-features {
   text-align: center;
@@ -335,9 +400,11 @@ export default {
 .feature-item {
   text-align: center;
   padding: 30px 20px;
-  background: #f8f9fa;
+  background: rgba(248, 249, 250, 0.6);
+  backdrop-filter: blur(10px);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 15px;
+  border: 1px solid rgba(240, 240, 240, 0.5);
   transition: transform 0.3s ease;
 }
 
@@ -364,9 +431,13 @@ export default {
 
 /* Responsive */
 @media (max-width: 768px) {
-  .locations-grid {
+  .store-info-grid {
     grid-template-columns: 1fr;
     gap: 30px;
+  }
+
+  .map-container iframe {
+    height: 350px;
   }
 
   .store-actions {
@@ -382,6 +453,10 @@ export default {
 @media (max-width: 480px) {
   .store-card {
     padding: 20px;
+  }
+
+  .map-container iframe {
+    height: 300px;
   }
 
   .features-grid {

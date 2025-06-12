@@ -236,7 +236,7 @@ export default {
 <style scoped>
 .reviews {
   padding: 100px 0;
-  background: #f8f9fa;
+  background:transparent;
 }
 
 .section-title {
@@ -411,8 +411,9 @@ export default {
 }
 
 .helpful-btn {
-  background: #f8f9fa;
-  border: 1px solid #e0e0e0;
+  background: rgba(248, 249, 250, 0.5);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(224, 224, 224, 0.5);
   padding: 6px 12px;
   border-radius: 16px;
   color: #666;
@@ -425,7 +426,8 @@ export default {
 .helpful-btn:hover {
   border-color: #e91e63;
   color: #e91e63;
-  background: #fce4ec;
+  background: rgba(252, 228, 236, 0.8);
+  backdrop-filter: blur(10px);
 }
 
 .verified {
