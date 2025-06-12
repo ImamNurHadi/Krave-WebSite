@@ -3,7 +3,10 @@
     <div class="container">
       <div class="footer-content">
         <div class="footer-brand">
-          <h3 class="footer-logo">Krave</h3>
+          <h3 class="footer-logo">
+            <img src="/logo-krave.png" alt="Krave Logo" class="footer-logo-img">
+            Krave
+          </h3>
           <p>Creating moments of joy, one delicious cookie at a time.</p>
           <div class="social-links">
             <a href="#" class="social-link">📘</a>
@@ -98,6 +101,15 @@ export default {
   color: #e91e63;
   margin-bottom: 15px;
   letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-logo-img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
 }
 
 .footer-brand p {

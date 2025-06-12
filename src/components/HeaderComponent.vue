@@ -1,7 +1,10 @@
 <template>
   <header class="header">
     <nav class="nav-container">
-      <a href="#" class="logo">Krave</a>
+      <a href="#" class="logo">
+        <img src="/logo-krave.png" alt="Krave Logo" class="logo-img">
+        Krave
+      </a>
       
       <div class="nav-menu" :class="{ active: isMenuOpen }">
         <ul>
@@ -57,7 +60,6 @@ export default {
   right: 0;
   z-index: 1000;
   backdrop-filter: blur(10px);
-  background: rgba(255, 255, 255, 0.95);
 }
 
 .nav-container {
@@ -76,6 +78,15 @@ export default {
   color: #e91e63;
   text-decoration: none;
   letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
 }
 
 .nav-menu ul {

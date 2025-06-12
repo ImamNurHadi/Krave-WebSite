@@ -267,7 +267,7 @@ export default {
 <style scoped>
 .products {
   padding: 100px 0;
-  background: #fff;
+  background: transparent;
   width: 100%;
   position: relative;
   z-index: 1;
@@ -311,7 +311,7 @@ export default {
 .filter-btn {
   padding: 12px 24px;
   border: 2px solid #e0e0e0;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.8);
   color: #666;
   border-radius: 25px;
   font-weight: 500;
@@ -319,6 +319,7 @@ export default {
   transition: all 0.3s ease;
   font-size: 0.95rem;
   white-space: nowrap;
+  backdrop-filter: blur(10px);
 }
 
 .filter-btn.active,
@@ -498,7 +499,8 @@ export default {
 }
 
 .modal {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(15px);
   border-radius: 20px;
   max-width: 900px;
   width: 100%;

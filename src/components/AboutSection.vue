@@ -179,7 +179,7 @@ export default {
 <style scoped>
 .about {
   padding: 100px 0;
-  background: #fff;
+  background: transparent;
 }
 
 .about-hero {

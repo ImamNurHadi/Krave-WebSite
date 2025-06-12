@@ -52,7 +52,7 @@ body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   color: #333;
   line-height: 1.6;
-  background-color: #fafafa;
+  background: transparent;
   overflow-x: hidden;
 }
 

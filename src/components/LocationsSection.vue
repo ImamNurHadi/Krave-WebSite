@@ -137,7 +137,7 @@ export default {
 <style scoped>
 .locations {
   padding: 100px 0;
-  background: #fff;
+  background: transparent;
 }
 
 .section-title {
@@ -183,11 +183,12 @@ export default {
 }
 
 .store-card {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
   border-radius: 20px;
   padding: 30px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  border: 1px solid #f0f0f0;
+  border: 1px solid rgba(240, 240, 240, 0.5);
   margin-bottom: 30px;
 }
 

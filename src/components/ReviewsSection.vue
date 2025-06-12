@@ -309,11 +309,12 @@ export default {
 }
 
 .review-card {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
   padding: 24px;
   border-radius: 16px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
-  border: 1px solid #f0f0f0;
+  border: 1px solid rgba(240, 240, 240, 0.5);
   min-width: 350px;
   max-width: 350px;
   flex-shrink: 0;
@@ -441,7 +442,8 @@ export default {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: #fff;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
   border: 2px solid #e91e63;
   color: #e91e63;
   width: 40px;
@@ -472,11 +474,12 @@ export default {
 
 .leave-review {
   text-align: center;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
   padding: 40px;
   border-radius: 20px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-  border: 1px solid #f0f0f0;
+  border: 1px solid rgba(240, 240, 240, 0.5);
   max-width: 500px;
   margin: 0 auto 80px;
 }
